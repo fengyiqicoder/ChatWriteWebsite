@@ -2,9 +2,9 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 .gradient-text {
-    background: linear-gradient(to right, #2173ba, #04702a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #2173ba;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 .chat-bubble {
     background-color: #000000c9;

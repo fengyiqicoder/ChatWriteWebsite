@@ -1,74 +1,20 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatWrite : Chats to Chapters</title>
+    <title>ChatWrite: Chats to Chapters</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Outfit', sans-serif;
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #B8DDFE, #B7E7C8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .chat-bubble {
-            background-color: #000000;
-            color: #FFFFFF;
-            border-radius: 24px;
-            padding: 16px;
-            position: relative;
-            max-width: 300px;
-        }
-        .chat-bubble::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border: 20px solid transparent;
-            border-top-color: #000000;
-            border-bottom: 0;
-            border-left: 0;
-            margin-left: -10px;
-            margin-bottom: -20px;
-        }
-        .input-container {
-            border: 2px solid #000000;
-            border-radius: 24px;
-            padding: 8px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .input-container input {
-            border: none;
-            outline: none;
-            flex-grow: 1;
-            margin-right: 8px;
-        }
-        .input-container .character-count {
-            color: #A0AEC0;
-            font-size: 12px;
-        }
-        .flex-grow {
-            flex-grow: 1;
-        }
-        .full-height {
-            height: calc(100vh - 64px - 48px); /* Adjust height calculation based on actual header and spacing */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-white min-h-screen">
     <div class="container mx-auto px-4 pt-8">
-        <h1 class="text-3xl font-bold mb-6 gradient-text">ChatWrite : Chats to Chapters</h1>
+        <h1 class="text-3xl font-bold mb-6 gradient-text">ChatWrite: Chats to Chapters</h1>
         <div class="flex flex-col md:flex-row items-start md:items-stretch justify-between space-y-6 md:space-y-0">
-            <div class="w-full md:w-1/2 flex flex-col">
-                <div class="mb-6 flex-grow">
+            <div class="w-full md:w-1/2 flex flex-col md:mr-5 ">
+                <div class="mb-6 flex flex-col justify-end flex-grow">
                     <h2 class="text-xl font-semibold mb-4">Chats</h2>
                     <div class="chat-bubble">
                         <span>Xxxx anything your wnt to talk</span>
@@ -76,13 +22,15 @@
                             <i class="fas fa-times"></i>
                         </button>
                     </div>
-                    <div class="input-container mt-6">
-                        <input type="text" placeholder="Small Talk start here...">
-                        <span class="character-count">23/200</span>
-                        <button class="text-gray-600">
+                    
+                    <div class="input-container mt-6 flex items-end"> 
+                        <textarea rows="4" placeholder="Start Writing Here" class="resize-none w-4/5 p-2"></textarea>
+                        <span class="character-count">0/200</span>
+                        <button class="text-white bg-teal-400 p-3 rounded-full flex items-center justify-center">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
+
                 </div>
             </div>
             <div class="w-full md:w-1/2 flex flex-col">
@@ -98,5 +46,6 @@
             </div>
         </div>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
